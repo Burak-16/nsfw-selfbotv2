@@ -18,7 +18,7 @@ client.on("ready", async () => {
 });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-client.login(BOT.token);
+client.login(process.env.token);
 client.setMaxListeners(30);
 
 client.on("messageCreate", async (message) => {
