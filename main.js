@@ -21,6 +21,8 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 client.login(process.env.token);
 client.setMaxListeners(30);
 
+
+
 client.on("messageCreate", async (message) => {
   if(BOT.owners.includes(message.author.id)) {
     if(message.content.startsWith("!kanalayarla")) {
@@ -45,6 +47,10 @@ client.on("messageCreate", async (message) => {
     }
   }
 });
+
+
+
+
 
 const express = require('express');
 const { channel } = require("diagnostics_channel");
